@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<html>
+<head>
+	<title>Husky</title>
+</head>
+
+<body>
+	<p id='para'>
+		Wiki
+	</p>
+
+	<form onsubmit="return update()">
+		<input type="text" id="message"/>
+	</form>
+	
+</body>
+
+<script type="text/javascript">
+	function update() {
+		var message = document.getElementById("message").value;
+		document.getElementById("para").innerHTML = message;
+		console.log(message);
+
+		return false;
+	}
+</script>
+</html>
