@@ -7,9 +7,11 @@
 </head>
 
 <body>
-	<p id='para'>
-		Wiki
-	</p>
+	<div id="chat">
+		<p>	Wiki </p>
+
+	</div>
+	
 
 	<form onsubmit="return update()">
 		<input type="text" id="message"/>
@@ -19,10 +21,12 @@
 
 <script type="text/javascript">
 	function update() {
-		var message = document.getElementById("message").value;
-		document.getElementById("para").innerHTML = message;
-		console.log(message);
+		var messageBox = document.getElementById("message")
+		var para = document.createElement("p");
+		para.innerHTML = messageBox.value;
 
+		document.getElementById("chat").appendChild(para);
+		messageBox.value = "";
 		return false;
 	}
 </script>
